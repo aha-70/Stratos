@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratos | Système Elite v3.0</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #0071e3; --green: #34c759; --bg: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: #1d1d1f; }
+
+        /* AUTHENTICATION */
+        #auth-page { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; text-align: center; }
+        .login-card { background: #f5f5f7; padding: 35px; border-radius: 30px; width: 100%; max-width: 400px; }
+        input { width: 100%; padding: 18px; border-radius: 15px; border: 1px solid #d2d2d7; margin-bottom: 15px; font-size: 16px; outline: none; }
+        .btn-black { width: 100%; background: #000; color: #fff; padding: 18px; border-radius: 15px; font-weight: 700; border: none; cursor: pointer; font-size: 16px; }
+
+        /* APP INTERFACE */
+        #main-app { display: none; padding-bottom: 100px; }
+        header { padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; sticky: top; background: #fff; z-index: 10; }
+        .container { padding: 20px; max-width: 500px; margin: 0 auto; }
+        
+        /* WIDGETS */
+        .hero-widget { background: #000; color: #fff; padding: 30px; border-radius: 30px; margin-bottom: 20px; text-align: center; }
+        .hero-widget h2 { font-size: 12px; opacity: 0.6; text-transform: uppercase; margin-bottom: 10px; }
+        .val-big { font-size: 50px; font-weight: 900; color: var(--green); letter-spacing: -2px; }
+
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+        .s-card { background: #f5f5f7; padding: 20px; border-radius: 25px; text-align: center; }
+        .s-card b { font-size: 24px; font-weight: 900; color: var(--blue); }
+
+        /* LISTE */
+        .h-item { background: #fff; padding: 18px; border-radius: 20px; border: 1px solid #eee; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .badge { background: #e8f5e9; color: #2e7d32; padding: 6px 12px; border-radius: 10px; font-weight: 800; font-size: 12px; }
+
+        /* NAVIGATION BAS */
+        .nav-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #eee; display: flex; justify-content: space-around; padding: 20px; z-index: 100; }
+        .nav-link { color: #86868b; font-weight: 700; font-size: 12px; cursor: pointer; text-transform: uppercase; }
+        .nav-link.active { color: var(--blue); }
+        .btn-plus { background: var(--blue); color: #fff; width: 60px; height: 60px; border-radius: 30px; display: flex; align-items: center; justify-content: center; font-size: 30px; margin-top: -50px; border: 6px solid #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.1); cursor: pointer; }
+
+        /* MODAL */
+        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+        .modal-box { background: #fff; padding: 30px; border-radius: 30px; width: 100%; max-width: 380px; }
+    </style>
+</head>
+<body>
+
+    <div id="auth-page">
+        <h1 style="font-weight:900; font-size:35px; margin-bottom:20px;">Stratos<span>.</span></h1>
+        <div class="login-card">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="pin" placeholder="Code Secret">
+            <button class="btn-black" onclick="login()">Se connecter</button>
+        </div>
+    </div>
+
+    <div id="main-app">
+        <header>
+            <div style="font-weight:900; font-size:22px;">Stratos.</div>
+            <button onclick="location.reload()" style="border:none; background:none; color:var(--blue); font-weight:700;">Quitter</button>
+        </header>
+
+        <div class="container">
+            <div class="hero-widget">
+                <h2 id="hero-label">Argent Économisé</h2>
+                <div class="val-big
