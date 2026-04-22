@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratos — La gestion simplifiée</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Palette Clean Design */
+            --bg: #ffffff;
+            --text-main: #111111;
+            --text-sub: #555555;
+            --primary: #000000; /* Noir pur pour les boutons principaux (comme Qonto) */
+            --border: #e0e0e0;
+            --success-bg: #e8f5e9;
+            --success-text: #2e7d32;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        body { background: var(--bg); color: var(--text-main); }
+
+        /* --- HEADER (Similaire à Revolut) --- */
+        header { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); position: fixed; width: 100%; top: 0; background: white; z-index: 1000; }
+        .logo { font-weight: 800; font-size: 22px; color: var(--text-main); letter-spacing: -1px; }
+        
+        /* Bouton Télécharger comme Revolut */
+        .btn-header { background: var(--primary); color: white; border: none; padding: 10px 18px; border-radius: 25px; font-weight: 600; font-size: 14px; cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero { padding: 120px 20px 60px; text-align: center; }
+        .hero h1 { font-size: 38px; font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 15px; }
+        .hero p { color: var(--text-sub); font-size: 17px; line-height: 1.5; max-width: 320px; margin: 0 auto 30px; }
+        
+        /* Gros bouton d'action comme Qonto */
+        .btn-large { background: var(--primary); color: white; border: none; padding: 18px 30px; border-radius: 12px; font-weight: 700; font-size: 16px; cursor: pointer; text-decoration: none; display: inline-block; width: 100%; max-width: 320px; }
+
+        /* --- SECTION ÉVIDENCE (Preuve Sociale / Statut) --- */
+        .social-proof { text-align: center; padding: 30px 20px; color: var(--text-sub); font-size: 14px; font-weight: 500; }
+        .stars { color: #fbc02d; font-size: 16px; margin-top: 5px; display: flex; justify-content: center; gap: 3px; }
+
+        /* --- SECTION FONCTIONNALITÉS (Comme le tableau Qonto) --- */
+        .features { padding: 40px 20px; }
+        .feat-row { display: flex; align-items: flex-start; gap: 15px; padding: 25px 0; border-bottom: 1px solid var(--border); }
+        .feat-icon { font-size: 24px; padding-top: 3px; }
+        .feat-text h3 { font-size: 17px; font-weight: 700; margin-bottom: 5px; }
+        .feat-text p { color: var(--text-sub); font-size: 14px; line-height: 1.5; }
+
+        /* --- ZONE DE CONNEXION ÉPURÉE (Au fond) --- */
+        .auth-zone { padding: 60px 20px; background: #fafafa; border-top: 1px solid var(--border); text-align: center; }
+        .auth-card { background: white; border: 1px solid var(--border); padding: 35px 25px; border-radius: 16px; max-width: 400px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        
+        input { width: 100%; padding: 16px; margin-bottom: 12px; border-radius: 10px; border: 1px solid #dcdcdc; background: white; color: var(--text-main); font-size: 16px; }
+        input:focus { border-color: #000; outline: none; }
+
+        .btn-alt { background: white; color: var(--text-main); border: 1px solid #dcdcdc; border-radius: 10px; }
+
+        /* --- PAYPAL (Comme bouton d'inscription) --- */
+        .btn-paypal { display: block; background: #0070ba; color: white; padding: 14px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px; margin-top: 25px; text-align: center; }
+
+        footer { text-align: center; padding: 40px; color: #aaa; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Stratos</div>
+        <button class="btn-header">Télécharger</button>
+    </header>
+
+    <section class="hero">
+        <h1>Bien plus qu'un<br>suivi personnel.</h1>
+        <p>Prenez le contrôle de votre budget et de votre bien-être dans une interface unique.</p>
+        <a href="#join" class="btn-large">Tester Stratos gratuitement</a>
+        
+        <p style="font-size: 12px; color: #888; margin-top: 15px;">Version gratuite 30 jours, sans engagement.</p>
+    </section>
+
+    <section class="social-proof">
+        <p>+50,000 personnes nous font confiance</p>
+        <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feat-row">
+            <div class="feat-icon">💰</div>
+            <div class="feat-text">
+                <h3>Suivi Budgétaire Simplifié</h3>
+                <p>Catégorisation automatique et prévisions de trésorerie en temps réel.</p>
+            </div>
+        </div>
+        <div class="feat-row">
+            <div class="feat-icon">❤️</div>
+            <div class="feat-text">
+                <h3>Bio-Synchronisation</h3>
+                <p>Optimisez votre sommeil, votre nutrition et votre énergie grâce à l'IA Stratos.</p>
+            </div>
+        </div>
+        <div class="feat-row">
+            <div class="feat-icon">📊</div>
+            <div class="feat-text">
+                <h3>Objectifs de Vie</h3>
+                <p>Définissez et atteignez vos objectifs personnels et financiers avec un coaching dédié.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="auth-zone" id="join">
+        <div class="auth-card">
+            <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 25px; letter-spacing: -0.5px;">Accéder à Stratos</h2>
+            <input type="email" placeholder="Votre adresse email">
+            <input type="password" placeholder="Mot de passe">
+            <button class="btn-large" style="width: 100%; font-size:15px; padding:15px;">Se connecter</button>
+
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+                <p style="font-size: 13px; color: var(--text-sub);">Pas encore de compte ?</p>
+                <a href="https://www.paypal.com/paypalme/TonNom/19.99" class="btn-paypal">
+                    Activer l'Accès Élite — 19.99€
+                </a>
+                <p style="font-size: 11px; color: #999; margin-top: 10px;">Accès à vie. Un seul paiement.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 STRATOS PERSONAL OS.
+    </footer>
+
+</body>
+</html>
