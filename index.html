@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratos — La nouvelle référence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #000000;
+            --blue: #0666eb;
+            --gray-bg: #f5f5f7;
+            --text-sub: #6e6e73;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: #ffffff; color: #000; }
+
+        /* NAVIGATION */
+        nav { padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+        .logo { font-weight: 800; font-size: 22px; letter-spacing: -1px; }
+        .logo span { color: var(--blue); }
+
+        /* HERO SECTION (Comme ton image Revolut) */
+        .hero { padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 40px; font-weight: 800; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1.5px; }
+        .hero p { color: var(--text-sub); font-size: 18px; max-width: 340px; margin: 0 auto 35px; line-height: 1.4; }
+        
+        .btn-black { background: var(--primary); color: #fff; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block; transition: 0.2s; }
+        .btn-white { background: #fff; color: #000; border: 1px solid #d2d2d7; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; margin-top: 10px; display: inline-block; }
+
+        /* RATING SECTION (Comme ton image Qonto) */
+        .ratings { padding: 40px 20px; display: flex; justify-content: space-around; border-top: 1px solid #eee; margin-top: 20px; }
+        .rate-box { text-align: center; }
+        .rate-val { font-size: 24px; font-weight: 800; display: block; }
+        .rate-label { font-size: 12px; color: var(--text-sub); font-weight: 500; }
+
+        /* COMPARATIF / FEATURES */
+        .proof { background: var(--gray-bg); padding: 40px 20px; text-align: center; }
+        .proof h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-sub); margin-bottom: 30px; }
+        .feature-card { background: #fff; padding: 25px; border-radius: 20px; margin-bottom: 15px; text-align: left; border: 1px solid #e5e5e5; }
+        .feature-card h3 { font-size: 18px; margin-bottom: 10px; }
+        .feature-card p { color: var(--text-sub); font-size: 14px; }
+
+        /* LOGIN AREA */
+        .login-section { padding: 60px 20px; }
+        input { width: 100%; padding: 18px; border-radius: 12px; border: 1px solid #d2d2d7; margin-bottom: 10px; font-size: 16px; background: var(--gray-bg); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Stratos</div>
+        <a href="#login" style="text-decoration:none; color:#000; font-weight:600; font-size:14px;">Connexion</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Bien plus qu'un<br>système de suivi.</h1>
+        <p>Prenez des décisions éclairées pour votre budget et votre santé.</p>
+        
+        <a href="#login" class="btn-black">Essayer gratuitement</a>
+        <br>
+        <a href="#" class="btn-white">Comparer Stratos vs LifeSync</a>
+    </section>
+
+    <section class="ratings">
+        <div class="rate-box">
+            <span class="rate-val">4.8 ★</span>
+            <span class="rate-label">sur App Store</span>
+        </div>
+        <div class="rate-box">
+            <span class="rate-val">4.7 ★</span>
+            <span class="rate-label">sur Trustpilot</span>
+        </div>
+    </section>
+
+    <section class="proof">
+        <h2>+600 000 utilisateurs nous font confiance</h2>
+        <div class="feature-card">
+            <h3>Support Elite 7j/7</h3>
+            <p>Une question ? Notre équipe vous répond en moins de 2 minutes, 24h/24.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Tarifs Transparents</h3>
+            <p>À partir de 0€ pour les basiques. 19.99€ pour l'accès Elite à vie.</p>
+        </div>
+    </section>
+
+    <section class="login-section" id="login">
+        <h2 style="margin-bottom:25px; text-align:center; font-weight:800;">Accéder au système</h2>
+        <input type="email" placeholder="Email professionnel ou personnel">
+        <input type="password" placeholder="Mot de passe">
+        <button class="btn-black" style="width:100%; border:none; cursor:pointer;">Lancer Stratos</button>
+        
+        <p style="text-align:center; margin-top:30px; font-size:13px; color:var(--text-sub);">
+            Pas encore de compte ? <br><br>
+            <a href="https://www.paypal.com/paypalme/TonNom/19.99" style="color:var(--blue); font-weight:700; text-decoration:none; border:1px solid var(--blue); padding:10px 20px; border-radius:30px;">OBTENIR LA LICENCE PRO</a>
+        </p>
+    </section>
+
+</body>
+</html>
